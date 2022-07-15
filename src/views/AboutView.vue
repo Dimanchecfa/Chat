@@ -15,6 +15,7 @@
                              src="https://avatars3.githubusercontent.com/u/22351907?s=60"/> -->
             </div>
             <p class="text-md font-bold hidden md:block">Messenger</p>
+            <p class="text-md font-bold hidden md:block"></p>
             <a href="#" class="block rounded-full hover:bg-gray-200 bg-gray-100 w-10 h-10 p-2">
               <svg viewBox="0 0 24 24" class="w-full h-full">
                 <path
@@ -121,130 +122,41 @@
           <div class="contacts p-2 flex-1 overflow-y-scroll">
 
 
-            <div class="flex justify-between items-center p-3 hover:bg-gray-100 rounded-lg relative">
+            <div @click="ShowUser(users.id ,users.nom , users.prenom)" :key="user.id" v-for="users in user" class="flex justify-between items-center p-3 hover:bg-gray-100 rounded-lg relative">
               <div class="w-16 h-16 relative flex flex-shrink-0">
                 <img class="shadow-md rounded-full w-full h-full object-cover"
-                  src="https://randomuser.me/api/portraits/men/22.jpg" alt="User2" />
+                  src="https://via.placeholder.com/150" alt="User2" />
               </div>
               <div class="flex-auto min-w-0 ml-4 mr-6 hidden md:block">
-                <p>Brad Pitt</p>
+                <p>{{users.nom }} {{ users.prenom}}</p>
                 <div class="flex items-center text-sm text-gray-600">
                   <div class="min-w-0">
                     <p class="truncate">you called Brad.
                     </p>
                   </div>
                   <p class="ml-2 whitespace-no-wrap">31 Dec</p>
+
+
+
+                  
                 </div>
               </div>
             </div>
-            <div class="flex justify-between items-center p-3 hover:bg-gray-100 rounded-lg relative">
-              <div class="w-16 h-16 relative flex flex-shrink-0">
-                <img class="shadow-md rounded-full w-full h-full object-cover"
-                  src="https://randomuser.me/api/portraits/men/99.jpg" alt="User2" />
-                <div class="absolute bg-white p-1 rounded-full bottom-0 right-0">
-                  <div class="bg-green-500 rounded-full w-3 h-3"></div>
-                </div>
-              </div>
-              <div class="flex-auto min-w-0 ml-4 mr-6 hidden md:block">
-                <p>Tom Hanks</p>
-                <div class="flex items-center text-sm text-gray-600">
-                  <div class="min-w-0">
-                    <p class="truncate">Tom called you.
-                    </p>
-                  </div>
-                  <p class="ml-2 whitespace-no-wrap">31 Dec</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex justify-between items-center p-3 hover:bg-gray-100 rounded-lg relative">
-              <div class="w-16 h-16 relative flex flex-shrink-0">
-                <img class="shadow-md rounded-full w-full h-full object-cover"
-                  src="https://randomuser.me/api/portraits/men/41.jpg" alt="User2" />
-              </div>
-              <div class="flex-auto min-w-0 ml-4 mr-6 hidden md:block">
-                <p>Dwayne Johnson</p>
-                <div class="flex items-center text-sm text-gray-600">
-                  <div class="min-w-0">
-                    <p class="truncate">How can i forget about that man!.
-                    </p>
-                  </div>
-                  <p class="ml-2 whitespace-no-wrap">12 Nov</p>
-                </div>
-              </div>
-              <div class="w-4 h-4 flex flex-shrink-0 hidden md:block">
-                <img class="rounded-full w-full h-full object-cover" alt="user2"
-                  src="https://randomuser.me/api/portraits/men/41.jpg" />
-              </div>
-            </div>
-            <div class="flex justify-between items-center p-3 hover:bg-gray-100 rounded-lg relative">
-              <div class="w-16 h-16 relative flex flex-shrink-0">
-                <img class="shadow-md rounded-full w-full h-full object-cover"
-                  src="https://randomuser.me/api/portraits/men/70.jpg" alt="User2" />
-              </div>
-              <div class="flex-auto min-w-0 ml-4 mr-6 hidden md:block">
-                <p>Johnny Depp</p>
-                <div class="flex items-center text-sm text-gray-600">
-                  <div class="min-w-0">
-                    <p class="truncate">Alright! let's catchup tomorrow!.
-                    </p>
-                  </div>
-                  <p class="ml-2 whitespace-no-wrap">4 Nov</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex justify-between items-center p-3 hover:bg-gray-100 rounded-lg relative">
-              <div class="w-16 h-16 relative flex flex-shrink-0">
-                <img class="shadow-md rounded-full w-full h-full object-cover"
-                  src="https://randomuser.me/api/portraits/men/20.jpg" alt="User2" />
-                <div class="absolute bg-white p-1 rounded-full bottom-0 right-0">
-                  <div class="bg-green-500 rounded-full w-3 h-3"></div>
-                </div>
-              </div>
-              <div class="flex-auto min-w-0 ml-4 mr-6 hidden md:block">
-                <p>Leonardo Dicaprio</p>
-                <div class="flex items-center text-sm text-gray-600">
-                  <div class="min-w-0">
-                    <p class="truncate">How can you leave Rose dude. I hate you!
-                    </p>
-                  </div>
-                  <p class="ml-2 whitespace-no-wrap">26 Oct</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex justify-between items-center p-3 hover:bg-gray-100 rounded-lg relative">
-              <div class="w-16 h-16 relative flex flex-shrink-0">
-                <img class="shadow-md rounded-full w-full h-full object-cover"
-                  src="https://randomuser.me/api/portraits/men/32.jpg" alt="User2" />
-              </div>
-              <div class="flex-auto min-w-0 ml-4 mr-6 hidden md:block">
-                <p>Tom Cruise</p>
-                <div class="flex items-center text-sm text-gray-600">
-                  <div class="min-w-0">
-                    <p class="truncate">Happy birthday to you my friend!
-                    </p>
-                  </div>
-                  <p class="ml-2 whitespace-no-wrap">2 Oct</p>
-                </div>
-              </div>
-              <div class="w-4 h-4 flex flex-shrink-0 hidden md:block">
-                <img class="rounded-full w-full h-full object-cover" alt="user2"
-                  src="https://randomuser.me/api/portraits/men/32.jpg" />
-              </div>
-            </div>
+            
           </div>
         </section>
 
         <section class="flex flex-col flex-auto border-l">
 
           <!-- entete de la conversation -->
-          <div class="chat-header px-6 py-4 flex flex-row flex-none justify-between items-center shadow">
-            <div class="flex">
+          <div  class="chat-header px-6 py-4 flex flex-row flex-none justify-between items-center shadow">
+            <div  class="flex">
               <div class="w-12 h-12 mr-4 relative flex flex-shrink-0">
                 <img class="shadow-md rounded-full w-full h-full object-cover"
-                  src="https://randomuser.me/api/portraits/women/33.jpg" alt="" />
+                  src="https://via.placeholder.com/150" alt="" />
               </div>
               <div class="text-sm">
-                <p class="font-bold">Scarlett Johansson</p>
+                <p class="font-bold">{{currentUser.nom}} {{currentUser.prenom}}</p>
                 <p>Active 1h ago</p>
               </div>
             </div>
@@ -278,7 +190,7 @@
             <div class="flex flex-row justify-start">
               <div class="w-8 h-8 relative flex flex-shrink-0 mr-4">
                 <img class="shadow-md rounded-full w-full h-full object-cover"
-                  src="https://randomuser.me/api/portraits/women/33.jpg" alt="" />
+                  src="https://randomuser.me/api/portraits/women/33.jpg" alt=""/>
               </div>
               <div class="messages text-sm text-gray-700 grid grid-flow-row gap-2">
                 <div class="flex items-center group">
@@ -342,10 +254,10 @@ C15.786,7.8,14.8,8.785,14.8,10s0.986,2.2,2.201,2.2S19.2,11.215,19.2,10S18.216,7.
 
 
 
-            <div class="flex flex-row justify-end">
-              <div class="messages text-sm text-white grid grid-flow-row gap-2">
-                <div class="flex items-center flex-row-reverse group">
-                  <p class="px-6 py-3 rounded-t-full rounded-l-full bg-blue-500 max-w-xs lg:max-w-md">Hey! How are you?
+            <div class="flex flex-row justify-end mt-2" :key="user.id" v-for="messages in messages">
+              <div class="messages text-sm text-white grid grid-flow-row gap-2" >
+                <div  class="flex items-center flex-row-reverse group">
+                  <p class="px-6 py-3 rounded-t-full rounded-l-full bg-blue-500 max-w-xs lg:max-w-md " v-if="messages.receiver_id == currentUser.id" id="monChamp" >{{messages.message}}
                   </p>
                   <button type="button"
                     class="hidden group-hover:block flex flex-shrink-0 focus:outline-none mx-2 block rounded-full text-gray-500 hover:text-gray-800 hover:bg-gray-200 bg-gray-100 w-8 h-8 p-2">
@@ -370,60 +282,7 @@ C15.786,7.8,14.8,8.785,14.8,10s0.986,2.2,2.201,2.2S19.2,11.215,19.2,10S18.216,7.
                     </svg>
                   </button>
                 </div>
-                <div class="flex items-center flex-row-reverse group">
-                  <p class="px-6 py-3 rounded-l-full bg-blue-500 max-w-xs lg:max-w-md">Shall we go for Hiking this
-                    weekend?</p>
-                  <button type="button"
-                    class="hidden group-hover:block flex flex-shrink-0 focus:outline-none mx-2 block rounded-full text-gray-500 hover:text-gray-800 hover:bg-gray-200 bg-gray-100 w-8 h-8 p-2">
-                    <svg viewBox="0 0 20 20" class="w-full h-full fill-current">
-                      <path d="M10.001,7.8C8.786,7.8,7.8,8.785,7.8,10s0.986,2.2,2.201,2.2S12.2,11.215,12.2,10S11.216,7.8,10.001,7.8z
-	 M3.001,7.8C1.786,7.8,0.8,8.785,0.8,10s0.986,2.2,2.201,2.2S5.2,11.214,5.2,10S4.216,7.8,3.001,7.8z M17.001,7.8
-	C15.786,7.8,14.8,8.785,14.8,10s0.986,2.2,2.201,2.2S19.2,11.215,19.2,10S18.216,7.8,17.001,7.8z" />
-                    </svg>
-                  </button>
-                  <button type="button"
-                    class="hidden group-hover:block flex flex-shrink-0 focus:outline-none mx-2 block rounded-full text-gray-500 hover:text-gray-800 hover:bg-gray-200 bg-gray-100 w-8 h-8 p-2">
-                    <svg viewBox="0 0 20 20" class="w-full h-full fill-current">
-                      <path
-                        d="M19,16.685c0,0-2.225-9.732-11-9.732V2.969L1,9.542l7,6.69v-4.357C12.763,11.874,16.516,12.296,19,16.685z" />
-                    </svg>
-                  </button>
-                  <button type="button"
-                    class="hidden group-hover:block flex flex-shrink-0 focus:outline-none mx-2 block rounded-full text-gray-500 hover:text-gray-800 hover:bg-gray-200 bg-gray-100 w-8 h-8 p-2">
-                    <svg viewBox="0 0 24 24" class="w-full h-full fill-current">
-                      <path
-                        d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-3.54-4.46a1 1 0 0 1 1.42-1.42 3 3 0 0 0 4.24 0 1 1 0 0 1 1.42 1.42 5 5 0 0 1-7.08 0zM9 11a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm6 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
-                    </svg>
-                  </button>
-                </div>
-                <div class="flex items-center flex-row-reverse group">
-                  <p class="px-6 py-3 rounded-b-full rounded-l-full bg-blue-500 max-w-xs lg:max-w-md">Lorem ipsum
-                    dolor sit
-                    amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Volutpat lacus laoreet non curabitur gravida.</p>
-                  <button type="button"
-                    class="hidden group-hover:block flex flex-shrink-0 focus:outline-none mx-2 block rounded-full text-gray-500 hover:text-gray-800 hover:bg-gray-200 bg-gray-100 w-8 h-8 p-2">
-                    <svg viewBox="0 0 20 20" class="w-full h-full fill-current">
-                      <path d="M10.001,7.8C8.786,7.8,7.8,8.785,7.8,10s0.986,2.2,2.201,2.2S12.2,11.215,12.2,10S11.216,7.8,10.001,7.8z
-	 M3.001,7.8C1.786,7.8,0.8,8.785,0.8,10s0.986,2.2,2.201,2.2S5.2,11.214,5.2,10S4.216,7.8,3.001,7.8z M17.001,7.8
-	C15.786,7.8,14.8,8.785,14.8,10s0.986,2.2,2.201,2.2S19.2,11.215,19.2,10S18.216,7.8,17.001,7.8z" />
-                    </svg>
-                  </button>
-                  <button type="button"
-                    class="hidden group-hover:block flex flex-shrink-0 focus:outline-none mx-2 block rounded-full text-gray-500 hover:text-gray-800 hover:bg-gray-200 bg-gray-100 w-8 h-8 p-2">
-                    <svg viewBox="0 0 20 20" class="w-full h-full fill-current">
-                      <path
-                        d="M19,16.685c0,0-2.225-9.732-11-9.732V2.969L1,9.542l7,6.69v-4.357C12.763,11.874,16.516,12.296,19,16.685z" />
-                    </svg>
-                  </button>
-                  <button type="button"
-                    class="hidden group-hover:block flex flex-shrink-0 focus:outline-none mx-2 block rounded-full text-gray-500 hover:text-gray-800 hover:bg-gray-200 bg-gray-100 w-8 h-8 p-2">
-                    <svg viewBox="0 0 24 24" class="w-full h-full fill-current">
-                      <path
-                        d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-3.54-4.46a1 1 0 0 1 1.42-1.42 3 3 0 0 0 4.24 0 1 1 0 0 1 1.42 1.42 5 5 0 0 1-7.08 0zM9 11a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm6 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
-                    </svg>
-                  </button>
-                </div>
+                
               </div>
             </div>
             <p class="p-4 text-center text-sm text-gray-500">SAT 2:10 PM</p>
@@ -434,7 +293,8 @@ C15.786,7.8,14.8,8.785,14.8,10s0.986,2.2,2.201,2.2S19.2,11.215,19.2,10S18.216,7.
 
 
           <div class="chat-footer flex-none">
-            <div class="flex flex-row items-center p-4">
+           
+              <div class="flex flex-row items-center p-4">
               <!-- <button type="button"
                 class="flex flex-shrink-0 focus:outline-none mx-2 block text-blue-600 hover:text-blue-700 w-6 h-6">
                 <svg viewBox="0 0 20 20" class="w-full h-full fill-current">
@@ -464,18 +324,19 @@ C15.786,7.8,14.8,8.785,14.8,10s0.986,2.2,2.201,2.2S19.2,11.215,19.2,10S18.216,7.
                 </svg>
               </button> -->
               <div class="relative flex-grow">
+               
                 <label>
                   <input
-                    class="rounded-full py-2 pl-3 pr-10 w-full border border-gray-200 bg-gray-200 focus:bg-white focus:outline-none text-gray-600 focus:shadow-md transition duration-300 ease-in"
-                    type="text" value="" placeholder="Aa" />
-                  <button type="button"
+                   v-model="message" class="rounded-full py-2 pl-3 pr-10 w-full border border-gray-200 bg-gray-200 focus:bg-white focus:outline-none text-gray-600 focus:shadow-md transition duration-300 ease-in"
+                    type="text"  placeholder="Aa"  />
+                  <button type="button"  @click="sendMessage()"
                     class="absolute top-0 right-0 mt-2 mr-3 flex flex-shrink-0 focus:outline-none block text-blue-600 hover:text-blue-700 w-6 h-6">
                     <svg viewBox="0 0 20 20" class="w-full h-full fill-current">
                       <path
                         d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM6.5 9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm7 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm2.16 3a6 6 0 0 1-11.32 0h11.32z" />
                       <!--                                        <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zM6.5 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm7 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm2.16 3H4.34a6 6 0 0 0 11.32 0z"/>-->
                     </svg>
-                  </button>
+                  </button>  
                 </label>
               </div>
               <button type="button"
@@ -486,12 +347,156 @@ C15.786,7.8,14.8,8.785,14.8,10s0.986,2.2,2.201,2.2S19.2,11.215,19.2,10S18.216,7.
                 </svg>
               </button>
             </div>
+
+           
+            
           </div>
         </section>
       </main>
     </div>
   </div>
 </template>
+<script>
+import axios from 'axios'
+import { mapState } from 'vuex'
+export default {
+  data () {
+    return {
+      user:[],
+      currentUser:[],
+      messages: [],
+      message:'',
+      sender_id:'',
+      receiver_id:''
+
+
+      
+
+    }
+  },
+    
+  computed: {
+    ...mapState({
+      user: 'userInfos',
+    })
+  },
+  methods: {
+    getUser() {
+      axios.get('https://api-dimanche.herokuapp.com/api/auth/user')
+
+      
+        .then((response )=> {
+        
+          this.user = response.data;
+          console.log(this.user);
+        })
+         
+        
+        .catch(error => {
+          console.log(error);
+
+        })
+    },
+      logout: function () {
+      this.$store.commit('logout');
+      this.$router.push('/');
+    },
+    getMessage() {
+      axios.get('https://api-dimanche.herokuapp.com/api/message')
+        .then((response )=> {
+        
+          this.messages = response.data;
+          console.log(response.data);
+        })
+         
+        
+        .catch(error => {
+          console.log(error);
+
+        })
+    },
+    ShowUser: function(id ,nom , prenom) {
+      this.currentUser = {
+        id,
+         nom,
+        prenom
+      }
+      
+     
+    },
+    attribuerFocus()
+      {
+        document.getElementById(monChamp).focus();
+      },
+    sendMessage() {
+      axios.post('https://api-dimanche.herokuapp.com/api/message', {
+       'sender_id':this.currentUser.id,
+       'receiver_id':this.currentUser.id,
+       
+       'message': this.message,
+       
+      })
+        .then((response )=> {
+          
+         
+          this.message = ''
+          this.messages = response.data;
+          console.log(user_id)
+          console.log(response.data);
+        })
+         
+        
+        .catch(error => {
+          console.log(error);
+
+        })
+    },
+    setInterval() {
+      setInterval(() => {
+        this.getUser();
+      }, 3000);
+    },
+    setIntervale() 
+    {
+      setInterval(() => {
+         this.getMessage();
+      }, 1000);
+    },
+  
+  },
+  
+    
+   mounted() {
+    this.getUser();
+    this.getMessage();
+    this.setInterval();
+    this.setIntervale();
+      console.log(this.$store.state.user.user_id);
+      console.log( this.$store.dispatch('getUser'));
+    if (this.$store.state.user.user_id == -1) {
+      this.$router.push('/');
+      return ;
+    }
+    this.$store.dispatch('getUser');
+  },
+      
+      // let y = document.getElementById(divExample);
+     
+      //   y.scrollTop = y.scrollHeight;
+        
+    
+
+   
+  
+
+     
+  
+   
+}
+
+
+
+</script>
 
 <style>
 @media (min-width: 1024px) {}

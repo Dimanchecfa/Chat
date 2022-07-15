@@ -44,13 +44,44 @@ export default {
       switchToLogin() {
         this.mode = 'login'
       },
-      createAccount() {
-     this.$router.push('/acceuil');
-      },
+     
       login() {
-     this.$router.push('/acceuil')
+       this.$store.dispatch('login',{
+        
+          
+          email:this.email,
+          password:this.password
+        })
+        .then((response)=>{
+          console.log(response)
+           
+            this.$router.push('/acceuil')
+            
+          
+        })
+        .catch((error)=>{
+         console.log(error)
+        })
+        
       },
-      },  
+      createAccount() {
+       this.$store.dispatch('createAccount',{
+          nom:this.nom,
+          prenom:this.prenom,
+          email:this.email,
+          password:this.password
+        })
+        .then((response)=>{
+          console.log(response)
+          this.mode = 'login';
+        })
+        .catch((error)=>{
+          console.log(error)
+        })
+        
+      },
+    },
+        
    
      
     
